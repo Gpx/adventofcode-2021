@@ -4,14 +4,7 @@ const input = `16,1,2,0,4,2,7,1,2,14`;
 
 function fuelCost(start, end) {
   const movements = Math.abs(start - end);
-  if (movements % 2 === 0) {
-    return (movements + 1) * (movements / 2);
-  } else {
-    return (
-      (movements + 1) * Math.floor(movements / 2) +
-      Math.floor((movements + 1) / 2)
-    );
-  }
+  return (movements ** 2 + movements) / 2;
 }
 
 function costPerPosition(input, position) {
